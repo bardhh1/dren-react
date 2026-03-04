@@ -19,7 +19,11 @@ export const DashboardScreen: FC = function DashboardScreen() {
   const upcomingBills = (data?.payees || []).filter((payee) => payee.amountDue > 0)
 
   return (
-    <Screen preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen
+      preset="scroll"
+      safeAreaEdges={["top", "bottom"]}
+      ScrollViewProps={{ showsVerticalScrollIndicator: false, bounces: true }}
+    >
       <View style={styles.container}>
         <View style={styles.headerRow}>
           <View>

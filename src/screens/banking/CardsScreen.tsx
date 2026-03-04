@@ -15,7 +15,11 @@ export const CardsScreen: FC = function CardsScreen() {
   const { data, actionLoading, setCardFreeze, updateCardLimit } = useBankingStore()
 
   return (
-    <Screen preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen
+      preset="scroll"
+      safeAreaEdges={["top", "bottom"]}
+      ScrollViewProps={{ showsVerticalScrollIndicator: false, bounces: true }}
+    >
       <View style={styles.container}>
         <Text preset="subheading">Cards</Text>
         {(data?.cards || []).map((card) => {

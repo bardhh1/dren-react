@@ -19,7 +19,11 @@ export const ProfileScreen: FC = function ProfileScreen() {
   const totalBalance = (data?.accounts || []).reduce((sum, account) => sum + account.balance, 0)
 
   return (
-    <Screen preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen
+      preset="scroll"
+      safeAreaEdges={["top", "bottom"]}
+      ScrollViewProps={{ showsVerticalScrollIndicator: false, bounces: true }}
+    >
       <View style={styles.container}>
         <Text preset="subheading">Profile</Text>
 

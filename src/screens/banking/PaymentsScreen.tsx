@@ -96,7 +96,11 @@ export const PaymentsScreen: FC = function PaymentsScreen() {
   }
 
   return (
-    <Screen preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen
+      preset="scroll"
+      safeAreaEdges={["top", "bottom"]}
+      ScrollViewProps={{ showsVerticalScrollIndicator: false, bounces: true }}
+    >
       <View style={styles.container}>
         <Text preset="subheading">Payments</Text>
 
